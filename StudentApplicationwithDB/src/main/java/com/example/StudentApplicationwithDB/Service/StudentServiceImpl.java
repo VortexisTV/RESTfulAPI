@@ -21,11 +21,11 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public Student getStudentByID(int id) {
-        Optional<Student> c = this.studentDAO.findById(id);
+        Optional<Student> s = this.studentDAO.findById(id);
         Student student = null;
-        if(c.isPresent())
+        if(s.isPresent())
         {
-            student=c.get();
+            student=s.get();
         }
         else {
             throw new RuntimeException("Student Not Found :"+id);

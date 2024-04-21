@@ -11,7 +11,7 @@ import java.util.List;
 public class StudentController {
 
     @Autowired
-    StudentService cs;
+    StudentService ss;
 
     @GetMapping("/")
     public String home() {
@@ -20,26 +20,26 @@ public class StudentController {
 
     @PostMapping("/students")
     public Student addStudent(@RequestBody Student student) {
-        return this.cs.addStudent(student);
+        return this.ss.addStudent(student);
     }
 
     @GetMapping("/students")
     public List<Student> getStudents() {
-        return this.cs.getAllStudents();
+        return this.ss.getAllStudents();
     }
 
     @GetMapping("/students/{id}")
     public Student getSingleStudent(@PathVariable String id) {
-        return this.cs.getStudentByID(Integer.parseInt(id));
+        return this.ss.getStudentByID(Integer.parseInt(id));
     }
 
     @PutMapping("/students/{id}")
     public Student updateStudent(@RequestBody Student student) {
-        return this.cs.updateStudent(student);
+        return this.ss.updateStudent(student);
     }
 
     @DeleteMapping("/students/{id}")
     public String deleteStudent(@PathVariable String id) {
-        return this.cs.deleteStudent(Integer.parseInt(id));
+        return this.ss.deleteStudent(Integer.parseInt(id));
     }
 }
