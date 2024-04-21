@@ -14,7 +14,7 @@ Start up the MySQL Workbench client and create a new schema.
 
 ![](images/s1.PNG)
 
-Name the schema database, ‘studentapi’ and create a new schema.
+Name the schema database, ‘studentapi’
 
 ![](images/s2.PNG)
 ![](images/s3.PNG)
